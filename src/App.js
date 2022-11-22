@@ -67,7 +67,7 @@ function App() {
           </ul>
         </div>
         <div className="score">
-          {history.reverse().map((item, index) => <div>
+          {history.reverse().map((item, index) => <div key={`step-${index}`}>
             {index + 1}.&nbsp; (<span className="player">{item.strategyK}</span>/<span className="enemy">{item.strategyB}</span>):&nbsp;
             <span className="player">{item.pointsK}</span> / <span className="enemy">{item.pointsB}</span>
           </div>)}
@@ -83,11 +83,14 @@ function App() {
           <table className='matrix'>
             <tbody>
               <tr>
-                <td></td>
-                {strategies.map(str => <td className="enemy">{str}</td>)}
+                <td key='strat-0'></td>
+                {strategies.map((str, i) => <td key={`strat-${i + 1}`} className="enemy">{str}</td>)}
               </tr>
-              {kizhe.map((el, row) => <tr>{el.map((val, i) => <>
-                {i === 0 && <td className='player'><button onClick={() => play(row + 1)}>{strategies[row]}</button></td>}<td>{val}</td>
+              {kizhe.map((el, row) => <tr key={`row-${row}`}>{el.map((val, i) => <>
+                {i === 0 && <td key={`matrix-trigger${row}-${i}`} className='player'>
+                  <button onClick={() => play(row + 1)}>{strategies[row]}</button>
+                </td>}
+                <td key={`matrix-${row}-${i}`}>{val}</td>
               </>)}</tr>)}
             </tbody>
           </table>
