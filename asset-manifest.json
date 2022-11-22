@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/blotto-game-TItPR/static/css/main.88cef307.css",
+    "main.js": "/blotto-game-TItPR/static/js/main.8691cc8e.js",
+    "static/js/787.52d2dc98.chunk.js": "/blotto-game-TItPR/static/js/787.52d2dc98.chunk.js",
+    "index.html": "/blotto-game-TItPR/index.html",
+    "main.88cef307.css.map": "/blotto-game-TItPR/static/css/main.88cef307.css.map",
+    "main.8691cc8e.js.map": "/blotto-game-TItPR/static/js/main.8691cc8e.js.map",
+    "787.52d2dc98.chunk.js.map": "/blotto-game-TItPR/static/js/787.52d2dc98.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.88cef307.css",
+    "static/js/main.8691cc8e.js"
+  ]
+}
